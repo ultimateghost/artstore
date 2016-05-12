@@ -6,6 +6,7 @@ gem "simple_form"
 gem "carrierwave"
 gem "mini_magick"
 gem "font-awesome-rails"
+gem "aasm"
 
 gem 'rails', '4.2.2'
 
