@@ -81,5 +81,5 @@ Rails.application.configure do
     Pay2go.integration_mode = :developement
   end
 
-  config.action_mailer.default_url_options = { host: 'app1e-shop-130516.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'app1e-shopping-130516.herokuapp.com' }
 end
