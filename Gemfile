@@ -11,6 +11,7 @@ gem "letter_opener", group: :development
 gem "roadie", "2.4.3"
 gem "pay2go"
 gem "figaro"
+gem "fog"
 
 gem 'rails', '4.2.2'
 
