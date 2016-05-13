@@ -78,6 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :developement
   end
+
+  config.action_mailer.default_url_options = { host: 'app1e-shop-130516.herokuapp.com' }
 end
