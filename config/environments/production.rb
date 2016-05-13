@@ -77,10 +77,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.after_initialize do
-    Pay2go.integration_mode = :developement
-  end
-
   config.action_mailer.default_url_options = { host: 'app1e-shopping-130516.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -91,4 +87,9 @@ Rails.application.configure do
     domain:         "sandbox57d7130b61184bb78715a7b4b1b41c93.mailgun.org",
     authentication: :plain,
   }
+
+
+  config.after_initialize do
+    Pay2go.integration_mode = :developement
+  end
 end
