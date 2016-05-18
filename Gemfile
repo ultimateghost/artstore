@@ -13,6 +13,7 @@ gem "pay2go"
 gem "figaro"
 gem "fog"
 gem "delayed_job_active_record"
+gem "omniauth-facebook"
 
 gem 'rails', '4.2.2'
 

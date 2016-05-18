@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   resources :items, controller: "cart_items"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   namespace :admin do
     resources :products
