@@ -16,3 +16,8 @@
 //= require bootstrap/dropdown
 //= require bootstrap/alert
 //= require_tree .
+
+
+//= require footable/footable.all.min.js
+//= require slick/slick.min.js
+//= require inspinia.js

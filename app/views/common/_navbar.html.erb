@@ -1,21 +1,22 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+<div class="row border-bottom white-bg">
+    <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">ArtStore</a>
+        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+            <i class="fa fa-reorder"></i>
+        </button>
+        <a href="/" class="navbar-brand">App1eStore</a>
     </div>
+    <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <%= link_to("Products", products_path) %>
+            </li>
+        </ul>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to("Products", products_path) %>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to carts_path do %>
-            購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
+            Shopping Cart <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
         </li>
 
@@ -38,13 +39,16 @@
                 <%= link_to("個人訂單列表", account_orders_path ) %>
               </li>
               <li>
-                <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
+                <i class="fa fa-sign-out">
+                    <%= link_to("Log out", destroy_user_session_path, method: :delete ) %>
+                </i>
               </li>
             </ul>
           </li>
         <% end %>
 
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+
+</div>
+        </nav>
+        </div>
