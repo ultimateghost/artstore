@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 class Admin::OrdersController < AdminController
-=======
-class Admin::OrdersController < ApplicationController
-  layout "admin"
-
-  before_action :authenticate_user!
-  before_action :admin_required
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
   def index
     @orders = Order.order("id DESC")

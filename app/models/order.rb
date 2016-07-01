@@ -2,23 +2,11 @@ class Order < ActiveRecord::Base
   belongs_to :user
 
   has_many :items, class_name: "OrderItem", dependent: :destroy
-<<<<<<< HEAD
   has_one  :info,  class_name: "OrderInfo", dependent: :destroy
 
   accepts_nested_attributes_for :info
 
   include Tokenable
-=======
-  has_one :info, class_name: "OrderInfo", dependent: :destroy
-
-  accepts_nested_attributes_for :info
-
-  before_create :generate_token
-
-  def generate_token
-    self.token = SecureRandom.uuid
-  end
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
   def build_item_cache_from_cart(cart)
     cart.items.each do |cart_item|
@@ -34,10 +22,7 @@ class Order < ActiveRecord::Base
     self.total = cart.total_price
     self.save
   end
-<<<<<<< HEAD
 
-=======
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   def set_payment_with!(method)
     self.update_columns(payment_method: method )
   end
@@ -46,10 +31,6 @@ class Order < ActiveRecord::Base
     self.update_columns(is_paid: true )
   end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   include AASM
 
   aasm do
@@ -81,8 +62,5 @@ class Order < ActiveRecord::Base
       transitions from: [:order_placed, :paid], to: :order_cancelled
     end
   end
-<<<<<<< HEAD
-=======
 
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 end

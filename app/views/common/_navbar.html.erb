@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="row border-bottom white-bg">
     <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-header">
@@ -19,35 +18,11 @@
           <%= link_to carts_path do %>
             Shopping Cart <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
-=======
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">ArtStore</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to("Products", products_path) %>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to carts_path do  %>
-            購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
-            <% end %>
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
         </li>
 
         <% if !current_user %>
           <li> <%= link_to("登入", new_user_session_path) %> </li>
-<<<<<<< HEAD
           <li> <%= link_to "Facebook 登入", user_omniauth_authorize_path(:facebook) %> </li>
-=======
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
         <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -56,40 +31,24 @@
             </a>
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
-<<<<<<< HEAD
                 <li>
                   <%= link_to("Admin 選單", admin_products_path) %>
                 </li>
-=======
-              <li>
-                <%= link_to("Admin 選單", admin_products_path) %>
-              </li>
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
               <% end %>
               <li>
                 <%= link_to("個人訂單列表", account_orders_path ) %>
               </li>
               <li>
-<<<<<<< HEAD
                 <i class="fa fa-sign-out">
                     <%= link_to("Log out", destroy_user_session_path, method: :delete ) %>
                 </i>
-=======
-                <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
               </li>
             </ul>
           </li>
         <% end %>
 
       </ul>
-<<<<<<< HEAD
 
 </div>
         </nav>
         </div>
-=======
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="wrapper wrapper-content animated fadeInRight ecommerce">
 <h2> Product Edit </h2>
 <div class="row">
@@ -53,34 +52,3 @@
 </div>
 
 </div>
-=======
-<h2> 修改增產品 </h2>
-
-<%= simple_form_for [:admin, @product] do |f| %>
-
-  <div class="group">
-    <%= f.input :title %>
-  </div>
-
-  <div class="group">
-    <%= f.input :description %>
-  </div>
-
-  <div class="group">
-    <%= f.input :quantity %>
-  </div>
-
-  <div class="group">
-    <%= f.input :price %>
-  </div>
-
-  <div class="form-group">
-    <%= f.simple_fields_for :photo do |c| %>
-    <%= c.input :image, as: :file %>
-    <% end %>
-  </div>
-
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
-
-  <% end %>
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de

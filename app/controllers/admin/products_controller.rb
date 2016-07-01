@@ -1,19 +1,7 @@
-<<<<<<< HEAD
 class Admin::ProductsController < AdminController
 
   def index
     @products = Product.all
-=======
-class Admin::ProductsController < ApplicationController
-
-  layout "admin"
-
-  before_action :authenticate_user!
-  before_action :admin_required
-
-  def index
-    @products =Product.all
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   end
 
   def new

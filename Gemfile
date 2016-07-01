@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem "devise"
 gem "bootstrap-sass"
 gem "simple_form"
-<<<<<<< HEAD
+
 gem "carrierwave"
 gem "mini_magick"
 gem "font-awesome-rails"
@@ -15,29 +15,9 @@ gem "figaro"
 gem "fog"
 gem "delayed_job_active_record"
 gem "omniauth-facebook"
-=======
-
-gem "carrierwave"
-gem "mini_magick"
-gem "aasm"
-
-gem "font-awesome-rails"
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
 gem 'rails', '4.2.2'
-<<<<<<< HEAD
 
-=======
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-# Use SCSS for stylesheets
->>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
