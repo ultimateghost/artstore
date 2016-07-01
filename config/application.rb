@@ -18,9 +18,15 @@ module Artstore
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+<<<<<<< HEAD
+    config.i18n.default_locale = "zh-TW"
+=======
+     config.i18n.default_locale = "zh-TW"
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.active_job.queue_adapter = :delayed_job
   end
 end

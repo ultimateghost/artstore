@@ -18,3 +18,10 @@
 
 
 config/database.yml
+public/uploads
+<<<<<<< HEAD
+
+# Ignore application configuration
+/config/application.yml
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
