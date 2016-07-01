@@ -1,5 +1,8 @@
 <h2>使用者列表</h2>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -11,6 +14,7 @@
   </thead>
   <tbody>
     <% @users.each do |user| %>
+<<<<<<< HEAD
       <tr>
         <td>
           <%= user.id %>
@@ -33,6 +37,26 @@
           <% end %>
         </td>
       </tr>
+=======
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td>
+        <% if user.admin? %>
+          管理者
+        <% else %>
+          一般使用者
+        <% end %>
+      </td>
+      <td>
+        <% if user.admin? %>
+          <%= link_to("轉為一般使用者", to_normal_admin_user_path(user), method: :post, class: "btn btn-info") %>
+        <% else %>
+          <%= link_to("轉為管理者", to_admin_admin_user_path(user), method: :post, class: "btn btn-primary") %>
+        <% end %>
+      </td>
+    </tr>
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
     <% end %>
   </tbody>
 </table>

@@ -13,8 +13,23 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD:app/assets/stylesheets/application.css.scss
+=======
+
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de:app/assets/stylesheets/application.css.scss
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
 
+<<<<<<< HEAD:app/assets/stylesheets/application.css.scss
 
+=======
+ .product-price{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff007c;
+ }
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de:app/assets/stylesheets/application.css.scss

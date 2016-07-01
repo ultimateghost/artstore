@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160518105535) do
+=======
+ActiveRecord::Schema.define(version: 20160116063109) do
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -26,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160518105535) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
     t.integer  "attempts",   default: 0, null: false
@@ -42,6 +47,8 @@ ActiveRecord::Schema.define(version: 20160518105535) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   create_table "order_infos", force: :cascade do |t|
     t.integer  "order_id"
     t.string   "billing_name"
@@ -105,8 +112,11 @@ ActiveRecord::Schema.define(version: 20160518105535) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+<<<<<<< HEAD
     t.string   "provider"
     t.string   "uid"
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

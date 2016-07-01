@@ -1,10 +1,16 @@
 class Admin::UsersController < ApplicationController
+<<<<<<< HEAD
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   layout "admin"
 
   before_action :authenticate_user!
   before_action :admin_required
+<<<<<<< HEAD
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   def index
     @users = User.all
   end

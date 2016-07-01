@@ -1,14 +1,24 @@
 class OrdersController < ApplicationController
+<<<<<<< HEAD
   before_action :authenticate_user!, except: [:pay2go_cc_notify, :pay2go_atm_complete]
 
   protect_from_forgery except: [:pay2go_cc_notify, :pay2go_atm_complete]
+=======
+  before_action :authenticate_user!
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
 
   def create
     @order = current_user.orders.build(order_params)
 
     if @order.save
+<<<<<<< HEAD
       OrderPlacingService.new(current_cart, @order).place_order!
 
+=======
+      @order.build_item_cache_from_cart(current_cart)
+      @order.calculate_total!(current_cart)
+      current_cart.clean!
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
@@ -29,6 +39,7 @@ class OrdersController < ApplicationController
     redirect_to account_orders_path, notice: "成功完成付款"
   end
 
+<<<<<<< HEAD
   def pay2go_cc_notify
     @order = Order.find_by_token(params[:id])
 
@@ -63,6 +74,8 @@ class OrdersController < ApplicationController
     end
   end
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   private
 
   def order_params

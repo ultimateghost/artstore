@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
+<<<<<<< HEAD
 
+=======
+>>>>>>> 961698b1369c8aae8de9fc786658e2e89ceca7de
   def index
     @products = Product.all
   end
